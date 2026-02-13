@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Quiz 💕</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <style>
+    .barn {
+      -webkit-mask-image:
+        radial-gradient(circle at center, black 65%, transparent 100%),
+        linear-gradient(to right, transparent 0%, black 10%),
+        linear-gradient(to left, transparent 0%, black 10%),
+        linear-gradient(to top, transparent 0%, black 10%),
+        linear-gradient(to bottom, transparent 0%, black 10%);
+
+      -webkit-mask-composite: intersect;
+      mask-composite: intersect;
+    }
+  </style>
+  <div class="container">
+    <div class="quiz-card" id="quizCard">
+      <div class="step-indicator" id="stepIndicator"></div>
+      <img src="2.png" alt="" class='barn' style="max-width: 150px; width: 100%;">
+      <div id="quizContent"></div>
+      <div class="board" id="board"></div>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup" id="popup">
+      <div class="popup-emoji" id="popupEmoji">💝</div>
+      <h3 id="popupTitle">Great choice!</h3>
+      <p id="popupMessage">You're doing amazing! Let's continue...</p>
+      <button class="popup-btn" onclick="closePopup()">Дальше</button>
+    </div>
+  </div>
+
+    <div class="popup-overlay popup-overlay-loose" id="popupOverlayLoose">
+    <div class="popup" id="popup">
+      <div class="l-wrap">
+        <img src="loading.gif" alt="" class="load">
+        <img src="1.png" alt="" style="max-width: 100%; width: 100%;">
+      </div>
+      <h3 id="popupTitle">Неправильно! ПОДУМОЙ</h3>
+      <button class="popup-btn" onclick="restartQuiz()">Подумать...</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
