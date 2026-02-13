@@ -30,7 +30,7 @@ const quizData = [
   },
   {
     emoji: "",
-    title: "Сыграем?",
+    title: "Теперь о вкусах",
     question: "Какое имя из перечисленных тебе нравится больше всего?",
     options: [
       "Костя",
@@ -327,6 +327,7 @@ function resetGame() {
     cell.classList.remove("bot");
   });
 }
+
 
 
 
